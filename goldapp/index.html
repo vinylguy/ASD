@@ -1,0 +1,577 @@
+<!doctype html>  
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Nate's DiscGolf Review</title>
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+	<link rel="stylesheet" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home">
+	
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>DiscGolf Review</h1>
+		</div>
+		
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+		
+		<div data-role="content" align="center" id="ctapage">
+			<p>Use this app to review disc golf courses, Review your own or read the reviews made by others.</p>
+			<!-- trying to get all data above the fold <img id="cta" src="images/lol.png"> -->
+			<a href="#reviewcourse" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e" data-mini="true">Add a Review Now</a>
+			<h4>Recent Reviews</h4>
+			<ul id="ticker" data-role="listview" data-inset="true">
+				<li><img src="images/par3.jpg">RiverFront Park
+				<p></br></p>
+				<p>Reviewed by: Nate Baker</p>
+				<p>Reviewed on: 6-12-2012</p>
+				<p><a href="#example">Read More</a></p>
+				</li>
+				<li><img src="images/par4.jpg">Whistlers Bend
+				<p></br></p>
+				<p>Reviewed by: Joe Dimagio</p>
+				<p>Reviewed on: 3-12-2012</p>
+				<p><a href="#example">Read More</a></p>
+				</li>
+				<li><img src="images/par5.jpg">Weasel Ridge DGC
+				<p></br></p>
+				<p>Reviewed by: Luke Reardon</p>
+				<p>Reviewed on: 10-12-2011</p>
+				<p><a href="#example">Read More</a></p>
+				</li>
+				<li><img src="images/par3.jpg">Small Valley DGC
+				<p></br></p>
+				<p>Reviewed by: Nate Baker</p>
+				<p>Reviewed on: 4-28-2011</p>
+				<p><a href="#example">Read More</a></p>
+				</li>
+				<li><img src="images/par4.jpg">Dexter Lake DGC
+				<p></br></p>
+				<p>Reviewed by: Jeff Bridges</p>
+				<p>Reviewed on: 1-22-2010</p>
+				<p><a href="#example">Read More</a></p>
+				</li>
+			</ul>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="favorites" data-add-back-btn="true" data-theme="e">
+	
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Personal Favorites</h1>
+		</div>
+		
+		<div data-role="content" align="left" id="logo">
+		<img id="logo" src="images/logo.png">
+		</div>
+	
+		<div data-role="content">
+			<p>Here you can view the reviews that you have marked favorite.</p>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<ul data-role="listview" data-inset="true">
+						<li><a href="#example"><img src="images/par3.jpg">River Bend</a>
+						<p>Roseburg Oregon</p>
+						</li>
+						<li><a href="#example"><img src="images/par4.jpg">Whistlers Bend</a>
+						<p>Roseburg Oregon</p>
+						</li>
+						<li><a href="#example"><img src="images/par3.jpg">RiverForks Park</a>
+						<p>Roseburg Oregon</p>
+						</li>
+					</ul>
+				</div>
+				<div class="ui-block-b">
+					<ul data-role="listview" data-inset="true">
+						<li><a href="#example"><img src="images/mixed.jpg">Beaver Ridge</a>
+						<p>Portland Oregon</p>
+						</li>
+						<li><a href="#example"><img src="images/par4.jpg">Scotts Mill</a>
+						<p>Beaverton Oregon</p>
+						</li>
+						<li><a href="#example"><img src="images/unknown.jpg">Newton Falls</a>
+						<p>Gorge Valley Oregon</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star" class="ui-btn-active">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="page" id="browse" data-add-back-btn="true" data-theme="e">
+	
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Browse Reviews</h1>
+		</div>
+		
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+	
+		<div data-role="content">
+			<p><h3>Browse Course Reviews by Par</h3></p>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#par3">
+				<h5>Par 3</h5>
+				<p>These courses were reviewed with a course par of 3.</p>
+				</a></li>
+				<li><a href="#par4">
+				<h5>Par 4</h5>
+				<p>These courses were rated with a course par of 4.</p>
+				</a></li>
+				<li><a href="#par5">
+				<h5>Par 5</h5>
+				<p>These courses were reviewed with a course par of 5.</p>
+				</a></li>
+				<li><a href="#mixed">
+				<h5>Mixed Par</h5>
+				<p>These courses have a mixed par set.</p>
+				</a></li>
+				<li><a href="#unknown">
+				<h5>Unknown Par</h5>
+				<p>These courses have no known par value.</p>
+				</a></li>
+			</ul>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid" class="ui-btn-active">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="par3" data-add-back-btn="true" data-theme="e">
+	
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Browse all Par 3</h1>
+		</div>
+	
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+	
+		<div data-role="content" data-theme="e">
+			<p>List generated by dynamically including par 3 from local storage.</p>
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#example">Riverfront Park</a></li>
+				<li><a href="#example">Whistlers Bend</a></li>
+				<li><a href="#example">Walkers Ridge</a></li>
+				<li><a href="#example">Test Valley DGC</a></li>
+				<li><a href="#example">FullSail DGC</a></li>
+				<li><a href="#example">Thomspon Reservoir</a></li>
+				<li><a href="#example">Eagle Peak DGC</a></li>
+				<li><a href="#example">Moore Park DGC</a></li>
+				<li><a href="#example">Pass Creek Park</a></li>
+				<li><a href="#example">Marrion Fields</a></li>
+				<li><a href="#example">Baker Valley DGC</a></li>
+			</ul>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid" class="ui-btn-active">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="par4" data-add-back-btn="true" data-theme="e">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Browse all Par 4</h1>
+		</div>
+		
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+	
+		<div data-role="content">
+			<p>List generated by dynamically including par 4 from local storage.</p>
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#example">Riverfront Park</a></li>
+				<li><a href="#example">Whistlers Bend</a></li>
+				<li><a href="#example">Walkers Ridge</a></li>
+				<li><a href="#example">Test Valley DGC</a></li>
+				<li><a href="#example">FullSail DGC</a></li>
+				<li><a href="#example">Thomspon Reservoir</a></li>
+				<li><a href="#example">Eagle Peak DGC</a></li>
+				<li><a href="#example">Moore Park DGC</a></li>
+				<li><a href="#example">Pass Creek Park</a></li>
+				<li><a href="#example">Marrion Fields</a></li>
+				<li><a href="#example">Baker Valley DGC</a></li>
+			</ul>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid" class="ui-btn-active">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="par5" data-add-back-btn="true" data-theme="e">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Browse all Par 5</h1>
+		</div>
+	
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+	
+		<div data-role="content">
+			<p>List generated by dynamically including par 5 from local storage.</p>
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#example">Riverfront Park</a></li>
+				<li><a href="#example">Whistlers Bend</a></li>
+				<li><a href="#example">Walkers Ridge</a></li>
+				<li><a href="#example">Test Valley DGC</a></li>
+				<li><a href="#example">FullSail DGC</a></li>
+				<li><a href="#example">Thomspon Reservoir</a></li>
+				<li><a href="#example">Eagle Peak DGC</a></li>
+				<li><a href="#example">Moore Park DGC</a></li>
+				<li><a href="#example">Pass Creek Park</a></li>
+				<li><a href="#example">Marrion Fields</a></li>
+				<li><a href="#example">Baker Valley DGC</a></li>
+			</ul>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid" class="ui-btn-active">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="mixed" data-add-back-btn="true" data-theme="e">
+	
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Browse all mixed par</h1>
+		</div>
+		
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+	
+		<div data-role="content">
+			<p>List generated by dynamically including mixed par from local storage.</p>
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#example">Riverfront Park</a></li>
+				<li><a href="#example">Whistlers Bend</a></li>
+				<li><a href="#example">Walkers Ridge</a></li>
+				<li><a href="#example">Test Valley DGC</a></li>
+				<li><a href="#example">FullSail DGC</a></li>
+				<li><a href="#example">Thomspon Reservoir</a></li>
+				<li><a href="#example">Eagle Peak DGC</a></li>
+				<li><a href="#example">Moore Park DGC</a></li>
+				<li><a href="#example">Pass Creek Park</a></li>
+				<li><a href="#example">Marrion Fields</a></li>
+				<li><a href="#example">Baker Valley DGC</a></li>
+			</ul>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid" class="ui-btn-active">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="unknown" data-add-back-btn="true" data-theme="e">
+	
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Browse all Par unknown</h1>
+		</div>
+		
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+	
+		<div data-role="content">
+			<p>List generated by dynamically including par unknown from local storage.</p>
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#example">Riverfront Park</a></li>
+				<li><a href="#example">Whistlers Bend</a></li>
+				<li><a href="#example">Walkers Ridge</a></li>
+				<li><a href="#example">Test Valley DGC</a></li>
+				<li><a href="#example">FullSail DGC</a></li>
+				<li><a href="#example">Thomspon Reservoir</a></li>
+				<li><a href="#example">Eagle Peak DGC</a></li>
+				<li><a href="#example">Moore Park DGC</a></li>
+				<li><a href="#example">Pass Creek Park</a></li>
+				<li><a href="#example">Marrion Fields</a></li>
+				<li><a href="#example">Baker Valley DGC</a></li>
+			</ul>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid" class="ui-btn-active">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="example" data-add-back-btn="true" data-theme="e">
+	
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Example Course Page</h1>
+		</div>
+		
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+	
+		<div data-role="content">
+			<p>This page is not finished, but in the final version will populate the reviews for the selected course.</p>
+			<p>Content will be created dynamically here.</p>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid" class="ui-btn-active">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="displaydata" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>View Display Data</h1>
+		</div>
+		
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+	
+	
+	
+		<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid">Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="reviewcourse" data-add-back-btn="true" data-theme="e">
+	
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Review Course</h1>
+		</div>
+		
+		<div data-role="content" align="left" id="logo">
+			<img id="logo" src="images/logo.png">
+		</div>
+	
+		<div data-role="content">
+			<a href="#" id="clearLink"> Clear Data </a><a href="#displaydata" id="displayLink" data-ajax="false"> Display Data </a><a href="#reviewcourse" id="addNew" style="display:none;">Add New Review</a>
+			<p>Please fill out as much information as you can for a complete review.</p>
+			<p>* Fields are required.</p>
+			<form action="" method="post" id="courseReview">
+				
+				<div data-role="fieldcontain">
+					<label for="cname">* Course Name:</label>
+					<input type="text" name="cname" id="cname" class="required"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="location">* Course Location:</label>
+					<input type="text" name="location" id="location" class="required" placeholder="City / State"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="rname">* Your Name:</label>
+					<input type="text" name="rname" id="rname" class="required" placeholder="John Doe"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="reviewdate">Review Date:</label>
+					<input type="date" name="reviewdate" id="reviewdate" data-role="datebox" data-options='{"mode": "calbox"}' default value="06/14/2012" class="required date"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-mini="true">
+						<legend>* Select Target Type:</legend>
+						<input type="radio" value="Baskets" name="targets" id="baskets" checked="checked">
+						<label for="baskets">Baskets</label>
+						<input type="radio" value="Tones" name="targets" id="tones">
+						<label for="tones">Tone Poles</label>
+						<input type="radio" value="Objects" name="targets" id="objects">
+						<label for="objects">Objects</label>
+						<input type="radio" value="Mixed" name="targets" id="mixed">
+						<label for="mixed">Mixed Targets</label>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-mini="true">
+						<legend>Course Amenities:</legend>
+						<input type="checkbox" value="parking" checked="checked" name="amenities" id="parking">
+						<label for="parking">Parking</label>
+						<input type="checkbox" value="restrooms" name="amenities" id="restrooms">
+						<label for="restrooms">Restrooms</label>
+						<input type="checkbox" value="handicap" name="amenities" id="handicap">
+						<label for="handicap">Handicap Accessible</label>
+						<input type="checkbox" value="camping" name="amenities" id="camping">
+						<label for="camping">Camping</label>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="courseRating">Course Rating</label>
+					<input type="range" name="courseRating" id="courseRating" value="5" min="0" max="10"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="totalholes">Total Amount of Holes:</label>
+					<input type="text" name="totalholes" id="totalholes" placeholder="18"/>
+				</div>
+			
+				<div data-role="fieldcontain">
+					<label for="comments">Comments:</label>
+					<textarea name="comments" id="comments"></textarea>
+				</div>
+				
+				<div data-role="fieldcontain" align="center">
+					<label for="favorite">Favorite?</label>
+						<select data-role="slider" id="favorite">
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+						</select>
+				</div>
+				
+				<div data-role="content">
+					<select name="select" id="select" data-native-menu="false">
+						<option data-placeholder="true" value="select">Select Course Par</option>
+						<optgroup label="Known Par">
+							<option value="Par3">Course scored as Par 3</option>
+							<option value="Par4">Course scored as Par 4</option>
+							<option value="Par5">Course scored as Par 5</option>
+							<option value="mixed">Course scored with a mix of par's</option>
+						<optgroup label="UnKnown Par">
+							<option value="unknown">Par is Unknown</option>	
+				</div>
+				<p>testing testy test</p>
+				
+				<div data-role="fieldcontain">
+					<input type="submit" value="Submit Review" id="submit" data-theme="c"/>
+					<input type="reset" value="Reset Form" id="reset" data-theme="a" />
+				</div>
+				
+			</form>
+			
+			<div data-role="footer" data-position="fixed" data-id="nav" data-theme="e">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#favorites" data-icon="star">Favorites</a></li>
+					<li><a href="#browse" data-icon="grid" >Browse</a></li>
+					<li><a href="#reviewcourse" data-icon="plus" class="ui-btn-active">Review</a></li>
+					<li><a href="http://vinylguy.github.com/MiU/bronzeapp/index.html" data-icon="info">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+			
+		</div>
+	
+	</div>
+	
+	<!-- JavaScript under here -->
+	
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+<script type="text/javascript" src="js/json.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>

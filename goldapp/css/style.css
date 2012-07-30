@@ -1,0 +1,56 @@
+/* write your CSS in here */
+
+label.error{display:block; margin:10px 0px; color:#cc0000;}
+
+yourname.placeholder{color:#d6d6d6;}
+
+#home
+{
+background-image:url(../images/bg.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#favorites
+{
+background-image:url(../images/bg.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#browse
+{
+background-image:url(../images/bg.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#reviewcourse
+{
+background-image:url(../images/bg.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#displaydata{
+background:none;
+}
+
+#displaydata.logo{
+position:absolute;
+top:0px;
+left:0px;
+}
+
+#logo{
+}
+
+#cta{
+border-radius:10px;
+border:3px solid white;
+box-shadow:3px 3px 3px #000000;
+}
+
+h4{
+color:black;
+}
