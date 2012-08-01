@@ -1,7 +1,14 @@
 //Nathan Baker
-//MiU term 06/2012
-//Project 4 gold app JS file
+//ASD Term 08/2012
+//Project gold app JS file
 
+
+$(document).ready(function(){
+	//Site Code here...
+	
+});
+
+//Existing Javascript from VFW and Miu
 //saving form data w/ console preview
 var parseReviewForm = function(data){
 	console.log(data);
