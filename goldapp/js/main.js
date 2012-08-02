@@ -22,8 +22,7 @@ $(document).bind("pageinit", function(){
 		//Save to Local Storage
 		submitHandler: function(){
 			var data = rcform.serializeArray();
-			//localStorage.setItem("formdata", data);
-			storeData(data);
+			localStorage.setItem("formdata", data);
 		}
 	});
 });
