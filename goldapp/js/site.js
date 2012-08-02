@@ -25,22 +25,14 @@ $(document).ready(function(){
 			invalidHandler: function(form, validator){},
 			//Save to Local Storage
 			submitHandler: function(form, data){
+			
 				var data = rcform.serializeArray();
-				console.log(data);
+				
+				$.each(data, function(i, obj){
+					localStorage.setItem(obj.name, obj.value);
+				
+				});
 			},
 		});
 	});
-
-	/*//Validator Functions 2
-	$(document).bind("pageinit", function(){
-		var rcform = $('#courseReview');
-		rcform.validate({
-			invalidHandler: function(form, validator){},
-			//Save to Local Storage
-			submitHandler: function(){
-				var data = rcform.serializeArray();
-				localStorage.setItem("formdata", data);
-			}
-		});
-	});*/
 });
